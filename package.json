@@ -6,7 +6,6 @@
 	"scripts": {
 		"start": "./run-start.sh $1",
 		"server": "node ./serveronly",
-		"install": " node installer",
 		"push": "git add . && git commit -m 'autopush' && git push origin main",
 		"test": "NODE_ENV=test mocha tests --recursive",
 		"test:coverage": "NODE_ENV=test nyc --reporter=lcov --reporter=text mocha tests --recursive --timeout=3000",
@@ -75,6 +74,7 @@
 		"feedme": "^2.0.2",
 		"helmet": "^4.4.1",
 		"iconv-lite": "^0.6.2",
+		"log4js": "^6.4.5",
 		"module-alias": "^2.2.2",
 		"moment": "^2.29.1",
 		"node-fetch": "^2.6.1",
