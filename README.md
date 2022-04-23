@@ -1,3 +1,8 @@
+npm i 
+node installer 
+npm run server
+
+
 ![MagicMirror²: The open source modular smart mirror platform. ](.github/header.png)
 
 <p style="text-align: center">
