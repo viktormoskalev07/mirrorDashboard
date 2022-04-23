@@ -85,13 +85,13 @@ function Server(config, callback) {
 			configFile = global.configuration_file;
 		}
 		html = html.replace("#CONFIG_FILE#", configFile);
-
 		res.send(html);
 	});
 
 	if (typeof callback === "function") {
 		callback(app, io);
 	}
+	app.use(express.static(path.resolve(__dirname, "../public")));
 }
 
 module.exports = Server;
