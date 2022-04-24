@@ -7,9 +7,9 @@
  * MIT Licensed.
  */
 var address = "localhost";
-var port = 8080;
+var port = process.env.PORT || 8080;
 if (typeof mmPort !== "undefined") {
-	port = mmPort;
+	port =process.env.PORT || mmPort;
 }
 var defaults = {
 	address: address,

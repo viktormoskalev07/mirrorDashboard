@@ -7,7 +7,7 @@ const { MODULE_NOTIFICATIONS } = require("./constants.js");
 
 const app = express();
 const server = http.createServer(app);
-const PORT = 8569;
+const PORT = process.env.PORT || 8569;
 const MANUFACTURER = "MMM-Screencast";
 const MODEL_NAME = "DIAL Server";
 let child = null;

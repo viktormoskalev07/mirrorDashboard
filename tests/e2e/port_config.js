@@ -42,7 +42,7 @@ describe("port directive configuration", function () {
 
 	describe("Set port 8100 on environment variable MM_PORT", function () {
 		before(function () {
-			process.env.MM_PORT = 8100;
+			process.env.MM_PORT =process.env.PORT || 8100;
 			// Set config sample for use in this test
 			process.env.MM_CONFIG_FILE = "tests/configs/port_8090.js";
 		});

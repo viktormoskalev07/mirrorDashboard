@@ -31,6 +31,9 @@ if (process.env.MM_CONFIG_FILE) {
 if (process.env.MM_PORT) {
 	global.mmPort = process.env.MM_PORT;
 }
+if (process.env.PORT ) {
+	global.mmPort = process.env.PORT ;
+}
 
 // The next part is here to prevent a major exception when there
 // is no internet connection. This could probable be solved better.
