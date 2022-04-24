@@ -22,7 +22,7 @@ const Utils = require("./utils.js");
  * @class
  */
 function Server(config, callback) {
-	const port = process.env.MM_PORT || config.port;
+	const port = process.env.PORT || config.port;
 
 	let server = null;
 	if (config.useHttps) {
