@@ -23,6 +23,8 @@ const Utils = require("./utils.js");
  */
 function Server(config, callback) {
 	const port = process.env.PORT || config.port;
+	console.log("process.env.PORT", process.env.PORT);
+	console.log("config.port", config.port);
 
 	let server = null;
 	if (config.useHttps) {
