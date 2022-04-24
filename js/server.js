@@ -75,7 +75,7 @@ function Server(config, callback) {
 	app.get("/config", function (req, res) {
 		res.send(config);
 	});
-
+	app.use(express.static(path.resolve(__dirname, "../../public")));
 	app.get("/", function (req, res) {
 		let html = fs.readFileSync(path.resolve(`${global.root_path}/index.html`), { encoding: "utf8" });
 		html = html.replace("#VERSION#", global.version);
@@ -91,7 +91,6 @@ function Server(config, callback) {
 	if (typeof callback === "function") {
 		callback(app, io);
 	}
-	app.use(express.static(path.resolve(__dirname, "../public")));
 }
 
 module.exports = Server;
