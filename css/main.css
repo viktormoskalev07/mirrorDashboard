@@ -24,6 +24,10 @@ a {
   text-decoration: none;
 }
 
+.region {
+  padding: 10px;
+}
+
 
 .hello-box {
   font-weight: 400;
@@ -144,7 +148,7 @@ a {
   left: 50%;
   top: 0;
   transform: translate(-50%, 0);
-  background: var(--zone-bg);
+  /*background: var(--zone-bg);*/
   border: 2px solid var(--zone-bord);
   width: 100vw !important;
   height: 100vh !important;
@@ -153,44 +157,6 @@ a {
 .flexgrid-container * {
   user-select: none;
 }
-
-.add-row, .remove-row {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  cursor: pointer;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background: #fff;
-  border: 2px solid #222;
-}
-
-.remove-row {
-  left: 50px;
-}
-
-.add-row::after, .remove-row::after {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: "\f067";
-  display: inline-block;
-  color: #222;
-  z-index: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.btn {
-  background: #fff;
-  color: #222;
-  font-weight: bold;
-  border: 2px solid #222;
-  border-radius: 5px;
-}
-
 
 .fg-col {
   position: absolute !important;
@@ -227,11 +193,6 @@ a {
   transition: 0.3s;
 }
 
-.btn:active {
-  transform-origin: 50% 50%;
-  transform: scale(0.9);
-}
-
 .flexgrid-grid, .zone-out-inner {
   position: absolute;
   top: 0;
@@ -253,7 +214,7 @@ a {
 
 .fg-widget-inner {
   position: absolute;
-  background: var(--widget-bg);
+  /*background: var(--widget-bg);*/
   z-index: 8;
   border-radius: 5px;
 }
@@ -335,7 +296,7 @@ a {
   position: absolute;
   z-index: 9;
   display: block;
-  background: var(--wig-color);
+  background: red;
   border-radius: 4px;
   pointer-events: none;
 }
@@ -346,7 +307,7 @@ a {
 }
 
 .ui-resizable-n, .ui-resizable-s {
-  left: calc(50% + 3px);
+  left: calc(-50% + 3px);
   transform: translate(-50%, 0);
   cursor: n-resize;
 }
@@ -467,8 +428,8 @@ a {
 }
 
 
-.ui-resizable-handle{
-  display: none!important;
+.ui-resizable-handle {
+  display: none !important;
 }
 
 .grab {
@@ -734,34 +695,34 @@ a {
 
 /*change display: block; on to if you want to show the element*/
 
-.region.fullscreen.below{
+.region.fullscreen.below {
   display: none;
 }
 
-.region.upper.third{
+.region.upper.third {
   display: none;
 }
 
-.region.middle.center{
+.region.middle.center {
   display: none;
 }
 
-.region.lower.third{
+.region.lower.third {
   display: none;
 }
 
-.region.bottom.left{
+.region.bottom.left {
   display: none;
 }
 
-.region .bottom .right{
+.region .bottom .right {
   display: none;
 }
 
-.region.bottom.bar{
+.region.bottom.bar {
   display: none;
 }
 
-.region.fullscreen.above{
+.region.fullscreen.above {
   display: none;
 }

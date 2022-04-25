@@ -19,18 +19,21 @@
   width: 70px;
   height: 70px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .st-container__standby-button span {
   width: 35px;
   height: 35px;
-  border: 2px solid #eee;
+  border: 4px solid #eee;
   display: block;
   border-radius: 10px;
-  margin-top: 30%;
   z-index: 999;
   visibility: visible !important;
 }
+
 
 .st-standby {
   visibility: visible;
@@ -53,7 +56,6 @@
 .st-container__menu-toggle {
   width: 70px;
   height: 70px;
-  margin: 0 0 0 20px;
   cursor: pointer;
   z-index: 999;
   display: flex;
@@ -64,17 +66,17 @@
 }
 
 .st-container__menu-toggle div {
-  width: 25px;
-  height: 2px;
+  width: 42px;
+  height: 4px;
   background: #eee;
-  margin: 4px 0;
+  margin: 3px 0;
   transition: all 0.3s;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
 .st-container__menu-toggle.show .st-toggle__bar_one {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(7px, 5px);
 }
 
 .st-container__menu-toggle.show .st-toggle__bar_two {
@@ -82,7 +84,7 @@
 }
 
 .st-container__menu-toggle.show .st-toggle__bar_three {
-  transform: rotate(-45deg) translate(8px, -9px);
+  transform: rotate(-45deg) translate(8px, -8px);
 }
 
 .st-container__main-menu {
@@ -102,28 +104,47 @@
 }
 
 .st-container__main-menu.show {
-  width: 150px;
+  width: 180px;
   right: 0;
 }
 
 .st-container__main-menu > ul {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 15px;
   margin: 0;
   list-style: none;
   flex-direction: column;
-  text-align: center;
-  white-space: nowrap;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.st-container__main-menu a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.st-container__main-menu a:hover, :focus, :active {
+  text-decoration: none;
 }
 
 .st-container__main-menu > ul > li {
-  font-size: 16px;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #666;
+  max-width: 50%;
+}
+.st-container__main-menu > ul > li:first-child {
+  margin-bottom: 20px;
 }
 
+.st-container__main-menu li img {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.st-container__main-menu li span {
+  color: var(--color-text);
+}
 .st-container__main-menu > ul > li:last-child {
   border: 0;
 }

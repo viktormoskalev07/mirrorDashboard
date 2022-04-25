@@ -1071,6 +1071,7 @@ $(function() {
 
 			var gridlines = options.showGridlines ? 'fg-gridlines' : ''; // is show gridlines checked?
 			for (var i = 0; i < colAmount; i++) {
+
 				zoneInner.append('<div class="fg-enabled-col fg-col ui-sortable '+gridlines+'" data-fg-eq="'+i+'" data-fg-row="'+ rowCount +'" style="min-width: '+re.cW+'px; min-height: '+re.rH+'px; top:'+appendHere+'px; left: '+(re.cW * i)+'px; "></div>');
 				var blah = zoneInner.find('.fg-col[data-fg-row="'+ rowCount +'"][data-fg-eq="'+i+'"]');
 				var n = zoneInner.find('.fg-col').index(blah);
@@ -1092,15 +1093,16 @@ $(function() {
 
 
 		$.fn.addRowHere = function(goHere, rowsNeeded) { // rows will be appended after specified columns row
-			var zoneInner = $(this);
-			var re = zoneInner.resetVars(); // reset zone variables
+			let zoneInner = $(this);
+			let re = zoneInner.resetVars(); // reset zone variables
 
-			var appendHere = goHere[0].offsetTop + re.rH; // new row position
-			var rowCount = parseInt(goHere.attr('data-fg-row')) + 1; // number of rows found within zone
+			let appendHere = goHere[0].offsetTop + re.rH; // new row position
+			let rowCount = parseInt(goHere.attr('data-fg-row')) + 1; // number of rows found within zone
 			var colAmount = options.cols; // number of columns spanning a row
 
 			var gridlines = options.showGridlines ? 'fg-gridlines' : ''; // is show gridlines checked?
 			for (la = 0; la < rowsNeeded; la++) {
+
 				for (var i = 0; i < colAmount; i++) {
 					zoneInner.append('<div class="fg-enabled-col fg-col ui-sortable '+gridlines+'" data-fg-eq="'+i+'" data-fg-row="'+rowCount+'" style="min-width: '+re.cW+'px; min-height: '+re.rH+'px; top:'+appendHere+'px; left: '+(re.cW * i)+'px;"></div>');
 					var blah = zoneInner.find('.fg-col[data-fg-row="'+(rowCount + 1)+'"][data-fg-eq="'+i+'"]');
@@ -1309,6 +1311,7 @@ $(function() {
 
 					for (var i = 0; i < sibs.length; i++) {
 						var colSib = sibs.eq(i);
+
 						if (colSib.children('.fg-widget').length > 0 && (colSib.offset().left == zoneCol.offset().left + zoneCol.width() || colSib.offset().top == zoneCol.offset().top + zoneCol.height()) ) {
 							zoneCol.checkCollision('resize', colSib); // check for collision when resizing
 						}
@@ -1321,6 +1324,7 @@ $(function() {
 				},
 				resize: function(event, ui) {
 					// DETECT COLLISION
+
 					var widget = ui.element;
 					var zoneCol = widget.parent();
 					var sibs = zoneCol.siblings('.fg-col');
@@ -1628,8 +1632,8 @@ $(function() {
 	var zone = $('.flexgrid-container');
 	var zoneInner = zone.find('.flexgrid-grid');
 	zoneInner.setFlexGrid({
-		cols: 8,
-		rows: 16,
+		cols: 22,
+		rows: 22,
 		defaultHeight: 1,
 		defaultWidth: 1,
 		minWidth: 1,
@@ -1646,11 +1650,11 @@ $(function() {
 	});
 	$(document).on('click', '.fg-add-widget', function() {
 		// widget.find('.fg-widget-inner').css('background', options.background != null ? options.background[Math.floor(Math.random() * options.background.length)] : '');
-		var widget = $('<div class="fg-widget"><i class="fas fa-arrows-alt move-widget fg-widget-handle"></i><div class="fg-widget-inner" style="background: #406fff !important;"></div></div>');
+		var widget = $('<div class="fg-widget"><div class="fg-widget-inner fg-widget-handle"></div></div>');
 		zoneInner.addWidget({widget:widget});
 	});
 
-	var widget = $('<div class="fg-widget"><i class="fas fa-arrows-alt move-widget fg-widget-handle"></i><div class="fg-widget-inner" style="background: #406fff !important;"></div></div>');
+	var widget = $('<div class="fg-widget"><div class="fg-widget-inner fg-widget-handle"></div></div>');
 	// for(var i = 0; i < 100; i++) {
 	// 	zoneInner.addWidget({widget:widget});
 	// }
@@ -1675,40 +1679,40 @@ $(function() {
 	// add an array of widgets
 	var widgets = [
 		{
-			width: 2,
+			width: 6,
 			height: 2,
-			x: 3,
-			y: 1,
+			x: 8,
+			y: 0,
 			container:'<div class="region top bar">\n' +
 				'\t\t<div class="container"></div>\n' +
 				'  </div>',
 		},
 		{
-			width: 2,
+			width: 5,
 			height: 1,
 			x: 0,
 			y: 8,
 			container:'<div class="region top left"><div class="container"></div></div>',
 		},
 		{
-			width: 6,
-			height: 4,
-			x: 1,
-			y: 3,
+			width: 14,
+			height: 6,
+			x: 4,
+			y: 2,
 			container:'<div class="region top center"><div class="container"></div></div>',
 		},
 		{
-			width: 2,
-			height: 3,
-			x: 6,
+			width: 6,
+			height: 4,
+			x: 16,
 			y: 8,
 			container:'<div class="region top right"><div class="container"></div></div>',
 		},
 		{
-			width: 2,
+			width: 3,
 			height: 1,
-			x: 6,
-			y: 13,
+			x: 19,
+			y: 19,
 			container: '<div class="region bottom center"><div class="container"></div></div>',
 		},
 	];
@@ -1728,7 +1732,7 @@ $(function() {
 
 
 
-		var widget = $('<div class="fg-widget custom-blue-widget"><i class="fas fa-arrows-alt move-widget fg-widget-handle"></i><div class="fg-widget-inner">'+containerClass+'</div></div>');
+		var widget = $('<div class="fg-widget custom-widget"><div class="fg-widget-inner fg-widget-handle">'+containerClass+'</div></div>');
 		zoneInner.addWidget({
 			widget: widget,
 			x:x, y:y,
@@ -1738,7 +1742,7 @@ $(function() {
 		});
 	}
 
-	$(document).on('resizestop', '.custom-blue-widget', function() {
+	$(document).on('resizestop', '.custom-widget', function() {
 		var text = $(this).find('.inner-icon');
 		var width = $(this).attr('data-fg-width');
 		var height = $(this).attr('data-fg-height');
@@ -1785,4 +1789,5 @@ $(function() {
 	});
 
 });
+
 

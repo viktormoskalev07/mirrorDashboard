@@ -7,7 +7,8 @@
  */
 
 Module.register("MMM-SmartTouch", {
-	defaults: {},
+	defaults: {
+	},
 
 	start: function () {
 		Log.info(this.name + " has started...");
@@ -22,7 +23,7 @@ Module.register("MMM-SmartTouch", {
 	getTranslations: function () {
 		return {
 			en: "translations/en.json",
-			nb: "translations/nb.json"
+			nb: "translations/nb.json",
 		};
 	},
 
@@ -46,18 +47,19 @@ Module.register("MMM-SmartTouch", {
 		const standByButtonDiv = document.createElement("div");
 		standByButtonDiv.className = "st-container__standby-button";
 
-		standByButtonDiv.appendChild(document.createElement("span"));
+		standByButtonDiv.appendChild(document.createElement("span"))
 		standByButtonDiv.addEventListener("click", () => this.toggleStandby());
 
 		return standByButtonDiv;
 	},
 
-	toggleSideMenu: function () {
-		const menuToggleDiv = document.getElementById("st-menu-toggle");
-		menuToggleDiv.classList.toggle("show");
 
-		const mainMenuDiv = document.getElementById("st-main-menu");
-		mainMenuDiv.classList.toggle("show");
+	toggleSideMenu: function () {
+		const menuToggleDiv = document.getElementById("st-menu-toggle")
+		menuToggleDiv.classList.toggle('show');
+
+		const mainMenuDiv = document.getElementById("st-main-menu")
+		mainMenuDiv.classList.toggle('show')
 	},
 
 	createMenuToggleButtonDiv: function () {
@@ -85,7 +87,10 @@ Module.register("MMM-SmartTouch", {
 
 	createShutdownButton: function () {
 		const shutdownButtonItem = document.createElement("li");
-		shutdownButtonItem.innerHTML = '<a href="/homebeauty">\n' + '  <img src="modules/MMM-SmartTouch/img/6.png" alt="logo">\n' + "</a>";
+		shutdownButtonItem.innerHTML = "<a href=\"/homebeauty\"> \n" +
+			"  <img src=\"modules/MMM-SmartTouch/img/6.png\" alt=\"logo\">\n" +
+			"  <span>Beauty</span>\n" +
+			"</a>";
 
 		shutdownButtonItem.className = "li-t";
 
@@ -94,7 +99,10 @@ Module.register("MMM-SmartTouch", {
 
 	createRestartButton: function () {
 		const restartButtonItem = document.createElement("li");
-		restartButtonItem.innerHTML = '<a href="/gallery">\n' + '  <img src="modules/MMM-SmartTouch/img/image.png" alt="logo">\n' + "</a>";
+		restartButtonItem.innerHTML = "<a href=\"/gallery\">\n" +
+			"  <img src=\"modules/MMM-SmartTouch/img/image.png\" alt=\"logo\">\n" +
+			"  <span>Gallery</span>\n" +
+			"</a>";
 		restartButtonItem.className = "li-t";
 
 		return restartButtonItem;
@@ -126,6 +134,7 @@ Module.register("MMM-SmartTouch", {
 		const standByButton = this.createStandByButtonDiv();
 		container.appendChild(standByButton);
 
+
 		const menuToggleButton = this.createMenuToggleButtonDiv();
 		container.appendChild(menuToggleButton);
 
@@ -135,8 +144,11 @@ Module.register("MMM-SmartTouch", {
 		return container;
 	},
 
-	notificationReceived: function (notification, payload, sender) {},
+	notificationReceived: function (notification, payload, sender) {
+	},
 
 	// Recieve notification from sockets via nodehelper.js
-	socketNotificationReceived: function (notification, payload) {}
+	socketNotificationReceived: function (notification, payload) {
+	},
+
 });
