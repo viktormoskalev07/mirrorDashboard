@@ -85,7 +85,7 @@ Module.register("MMM-SmartTouch", {
 
 	createShutdownButton: function () {
 		const shutdownButtonItem = document.createElement("li");
-		shutdownButtonItem.innerHTML = '<a href="https://mirror-react.vercel.app/homebeauty">\n' + '  <img src="modules/MMM-SmartTouch/img/6.png" alt="logo">\n' + "</a>";
+		shutdownButtonItem.innerHTML = '<a href="/homebeauty">\n' + '  <img src="modules/MMM-SmartTouch/img/6.png" alt="logo">\n' + "</a>";
 
 		shutdownButtonItem.className = "li-t";
 
@@ -94,7 +94,7 @@ Module.register("MMM-SmartTouch", {
 
 	createRestartButton: function () {
 		const restartButtonItem = document.createElement("li");
-		restartButtonItem.innerHTML = '<a href="https://mirror-react.vercel.app/gallery">\n' + '  <img src="modules/MMM-SmartTouch/img/image.png" alt="logo">\n' + "</a>";
+		restartButtonItem.innerHTML = '<a href="/gallery">\n' + '  <img src="modules/MMM-SmartTouch/img/image.png" alt="logo">\n' + "</a>";
 		restartButtonItem.className = "li-t";
 
 		return restartButtonItem;
