@@ -17,7 +17,7 @@ var defaults = {
 	basePath: "/",
 	kioskmode: false,
 	electronOptions: {},
-	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"],
+	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], 
 
 	language: "en",
 	logLevel: ["INFO", "LOG", "WARN", "ERROR"],
