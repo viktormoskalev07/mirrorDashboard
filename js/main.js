@@ -1718,6 +1718,13 @@ $(function() {
 			y: 19,
 			container: '<div class="region bottom center"><div class="container"></div></div>',
 		},
+		{
+			width: 8,
+			height: 4,
+			x: 14,
+			y: 18,
+			container: '<div class="region bottom right"><div class="container"></div></div>',
+		},
 	];
 
 	for (var i = 0; i < widgets.length; i++) {
