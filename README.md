@@ -3,6 +3,8 @@ node installer
 npm run server
 
 
+
+
 ![MagicMirror²: The open source modular smart mirror platform. ](.github/header.png)
 
 <p style="text-align: center">
@@ -54,3 +56,37 @@ To donate, please follow [this](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xcl
 <p style="text-align: center">
 	<a href="https://forum.magicmirror.builders/topic/728/magicmirror-is-voted-number-1-in-the-magpi-top-50"><img src="https://magicmirror.builders/img/magpi-best-watermark-custom.png" width="150" alt="MagPi Top 50"></a>
 </p>
+
+## Add new widget:
+1. In the main.js file in the js folder 
+
+ ![](readme/folder.png) 
+
+ 2. There is an array with objects for each widget
+
+| ![Add widgets](readme/arr-widgets1.png) | ![Add widgets](readme/arr-widgets2.png) |  
+| ----------------------------------------------- | -------------------------------------- | 
+
+3.The screen is divided into 22 rows and 22 columns
+(the width and height of each cell is calculated depending on the screen size)
+The number of rows and cells can be changed in this object
+
+![](readme/rows-col.png) 
+
+4. To add a new widget, you need to specify in the object the height and width of the new widget and the coordinates along the x and y axes
+
+![](readme/widget-add.png) 
+
+grid looks like this
+
+the widget occupies 2 cells in height and 2 in width and is located in 1 cell on the x-axis and in the first cell on the y-axis 
+column and row numbering starts from 0
+
+| ![](readme/new-widget.png) | ![](readme/widget-2.png) |  
+| ----------------------------------------------- | -------------------------------------- | 
+
+all class identifiers for widgets from the mirror documentation are saved in the object for widgets
+
+| ![](readme/positions.png) |  |  
+| ----------------------------------------------- | -------------------------------------- | 
+| ![](readme/allWidgets2.png) | ![](readme/allWidgets.png) |  

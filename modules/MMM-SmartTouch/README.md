@@ -63,6 +63,3 @@ Here is an example for an entry in `config.js`
 None configuration options
 
 
-How to add a new widget?
- 1. In main.js
-

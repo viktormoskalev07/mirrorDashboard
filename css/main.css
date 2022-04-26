@@ -48,24 +48,24 @@ a {
 }
 
 #module_2_clock .time {
-  font-size: 65px;
+  font-size: calc(30px + (50 - 30) * ( (100vw - 1024px) / ( 1600 - 1024) ));
   line-height: 65px;
   font-weight: 300;
 }
 
+#module_3_MMM-3Day-Forecast{
+  font-size: 18px;
+}
+
 
 #module_5_compliments .xlarge {
-  font-size: 75px;
+  font-size: calc(40px + (50 - 40) * ( (100vw - 1024px) / ( 1600 - 1024) ));
   line-height: 75px;
   letter-spacing: -3px;
   font-weight: 100;
   text-align: center;
 }
 
-#module_4_MMM-3Day-Forecast .module-content {
-  display: flex;
-  justify-content: center;
-}
 
 #module_6_MMM-SmartTouch .st-container {
   position: static;
@@ -515,75 +515,10 @@ a {
   top: 0;
 }
 
-/* toggle gridlines */
-
-.view-gridlines-div {
-  width: fit-content;
-  display: inline-block;
-}
-
-.view-gridlines-label {
-  padding-right: 10px;
-  color: white;
-}
-
-.toggle {
-  display: inline-block;
-  width: fit-content;
-  padding-left: 10px;
-  border-radius: 50px;
-  transition: 0.3s;
-  cursor: pointer;
-  background: #fff;
-  border: 2px solid #111;
-  position: relative;
-}
-
-.toggle input[type="checkbox"] {
-  opacity: 0;
-  z-index: 1;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.toggle label {
-  min-height: 20px;
-  margin-bottom: 0;
-  font-weight: normal;
-  cursor: pointer;
-  width: 40px;
-  height: 20px;
-  color: #91a6ff;
-}
-
-.toggle label::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 0px;
-  margin-left: 5px;
-  margin-top: 3px;
-  border: 2px solid #222;
-  border-radius: 50%;
-  background-color: #fff;
-  transition: 0.3s;
-}
-
-.toggle input[type="checkbox"]:checked + label::after {
-  left: 20px;
-  background-color: #222;
-}
 
 .display-inline {
   display: inline-block;
 }
-
 
 /* nested */
 .nested-holder-label {
@@ -689,39 +624,4 @@ a {
   border: 1px dashed #111;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-
-}
-
-/*change display: block; on to if you want to show the element*/
-
-.region.fullscreen.below {
-  display: none;
-}
-
-.region.upper.third {
-  display: none;
-}
-
-.region.middle.center {
-  display: none;
-}
-
-.region.lower.third {
-  display: none;
-}
-
-.region.bottom.left {
-  display: none;
-}
-
-.region .bottom .right {
-  display: none;
-}
-
-.region.bottom.bar {
-  display: none;
-}
-
-.region.fullscreen.above {
-  display: none;
 }

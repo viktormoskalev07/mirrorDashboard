@@ -347,7 +347,10 @@ var MM = (function () {
 	 * update notification is not visible.
 	 */
 	var updateWrapperStates = function () {
-		var positions = ["top_bar", "top_left", "top_center", "top_right", "upper_third", "middle_center", "lower_third", "bottom_left", "bottom_center", "bottom_right", "bottom_bar", "fullscreen_above", "fullscreen_below"];
+		var positions = ["top_bar", "top_left", "top_center", "top_right",
+			"upper_third", "middle_center", "lower_third", "bottom_left",
+			"bottom_center", "bottom_right", "bottom_bar", "fullscreen_above",
+			"fullscreen_below"];
 
 		positions.forEach(function (position) {
 
@@ -939,8 +942,6 @@ $(function() {
 
 		// pass in parameters such as: x, y, width, height to position and size the widget
 		$.fn.addWidget = function(params) {
-
-			console.log('options: ', options);
 			var zoneInner = $(this);
 			var re = zoneInner.resetVars(); // reset zone variables
 			var goHere;
@@ -1686,9 +1687,7 @@ $(function() {
 			height: 2,
 			x: 8,
 			y: 0,
-			container:'<div class="region top bar">\n' +
-				'\t\t<div class="container"></div>\n' +
-				'  </div>',
+			container:'<div class="region top bar"><div class="container"></div></div>',
 		},
 		{
 			width: 5,
@@ -1699,7 +1698,7 @@ $(function() {
 		},
 		{
 			width: 14,
-			height: 6,
+			height: 5,
 			x: 4,
 			y: 2,
 			container:'<div class="region top center"><div class="container"></div></div>',
@@ -1714,7 +1713,7 @@ $(function() {
 		{
 			width: 3,
 			height: 1,
-			x: 9,
+			x: 10,
 			y: 19,
 			container: '<div class="region bottom center"><div class="container"></div></div>',
 		},
@@ -1724,6 +1723,56 @@ $(function() {
 			x: 14,
 			y: 18,
 			container: '<div class="region bottom right"><div class="container"></div></div>',
+		},
+		//if you need to add a new widget
+		{
+			width: 0,
+			height: 0,
+			x: 0,
+			y: 0,
+			container: '<div class="region fullscreen below"><div class="container"></div></div>',
+		},
+		{
+			width: 0,
+			height: 0,
+			x: 0,
+			y: 0,
+			container: '<div class="region upper third"><div class="container"></div></div>',
+		},
+		{
+			width: 0,
+			height: 0,
+			x: 0,
+			y: 0,
+			container: '<div class="region middle center"><div class="container"></div></div>',
+		},
+		{
+			width: 0,
+			height: 0,
+			x: 0,
+			y: 0,
+			container: '<div class="region lower third"><div class="container"><br/></div></div>',
+		},
+		{
+			width: 0,
+			height: 0,
+			x: 0,
+			y: 0,
+			container: '<div class="region bottom bar"><div class="container"></div></div>',
+		},
+		{
+			width: 0,
+			height: 0,
+			x: 0,
+			y: 0,
+			container: '<div class="region bottom left"><div class="container"></div></div>',
+		},
+		{
+			width: 0,
+			height: 0,
+			x: 0,
+			y: 0,
+			container: '<div class="region fullscreen above"><div class="container"></div></div>',
 		},
 	];
 
