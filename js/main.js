@@ -1184,6 +1184,9 @@ $(function() {
 					var zoneCol = $(this);
 					var zoneInner = zoneCol.closest('.flexgrid-grid')
 					var sibs = zoneCol.siblings('.fg-col');
+					// Getter
+					var placeholder = $( ".selector" ).sortable( "option", "placeholder" );
+					console.log(placeholder)
 
 					var widget = zoneCol.find('.fg-widget');
 					zoneCol.modCols('enable'); // enable overlapped columns
@@ -1711,7 +1714,7 @@ $(function() {
 		{
 			width: 3,
 			height: 1,
-			x: 19,
+			x: 9,
 			y: 19,
 			container: '<div class="region bottom center"><div class="container"></div></div>',
 		},

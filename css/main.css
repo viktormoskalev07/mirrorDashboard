@@ -148,7 +148,7 @@ a {
   left: 50%;
   top: 0;
   transform: translate(-50%, 0);
-  /*background: var(--zone-bg);*/
+ /* background: var(--zone-bg);*/
   border: 2px solid var(--zone-bord);
   width: 100vw !important;
   height: 100vh !important;
@@ -214,7 +214,7 @@ a {
 
 .fg-widget-inner {
   position: absolute;
-  /*background: var(--widget-bg);*/
+/*  background: var(--widget-bg);*/
   z-index: 8;
   border-radius: 5px;
 }
@@ -265,7 +265,7 @@ a {
 .fg-widget-placeholder {
   border: 1px dashed rgba(0, 0, 0, 0.5) !important;
   border-radius: 5px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(40, 39, 39, 0.3);
   top: 5px;
   left: 5px;
   bottom: 5px;
@@ -296,7 +296,6 @@ a {
   position: absolute;
   z-index: 9;
   display: block;
-  background: red;
   border-radius: 4px;
   pointer-events: none;
 }
